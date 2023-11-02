@@ -2,37 +2,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Campus-Wegweiser</title>
+    <title>Campus-Wegweiser HTW Saar Campus Rotenbühl</title>
+    <style>
+        /* Stil für die Wegweiser-Elemente */
+        .wegweiser {
+            border: 2px solid #0077b6;
+            padding: 10px;
+            margin: 10px;
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+
+        .wegweiser:hover {
+            background-color: #b7e4cf;
+        }
+    </style>
 </head>
 <body>
-    <h1>Willkommen zum HTW Saar Campus Rotenbühl</h1>
-    <p>Dies ist Ihr Campus-Wegweiser, um sich auf dem Campus zurechtzufinden.</p>
+    <h1>Campus-Wegweiser HTW Saar Campus Rotenbühl</h1>
+    <div class="wegweiser" id="mensa">
+        <h2>Mensa</h2>
+        <p>Die Mensa bietet eine Vielzahl von Speisen und Getränken. Hier finden Sie leckere Mahlzeiten zu günstigen Preisen.</p>
+    </div>
 
-    <h2>Standorte:</h2>
-    <ul>
-        <li><a href="#mensa">Mensa</a></li>
-        <li><a href="#druckerräume">Druckerräume</a></li>
-        <li><a href="#bibliothek">Bibliothek</a></li>
-        <!-- Fügen Sie weitere Standorte hinzu -->
-    </ul>
+    <div class="wegweiser" id="druckerräume">
+        <h2>Druckerräume</h2>
+        <p>Die Druckerräume stehen den Studierenden zur Verfügung und bieten Druck- und Kopierservices.</p>
+    </div>
 
-    <h2>Mensa</h2>
-    <p>Die Mensa befindet sich im Hauptgebäude und bietet eine Vielzahl von Speisen und Getränken.</p>
+    <div class="wegweiser" id="bibliothek">
+        <h2>Bibliothek</h2>
+        <p>Die Campus-Bibliothek ist ein großartiger Ort zum Lernen und bietet eine umfangreiche Sammlung von Büchern und Ressourcen.</p>
+    </div>
 
-    <h2>Druckerräume</h2>
-    <p>Die Druckerräume stehen den Studierenden zur Verfügung und befinden sich in Gebäude XYZ.</p>
+    <!-- Fügen Sie weitere Wegweiser hinzu -->
 
-    <h2>Bibliothek</h2>
-    <p>Die Campus-Bibliothek bietet eine umfangreiche Sammlung von Büchern und Ressourcen.</p>
+    <script>
+        // JavaScript für die Interaktivität
+        var wegweiserElemente = document.querySelectorAll('.wegweiser');
 
-    <!-- Fügen Sie weitere Standortdetails hinzu -->
-
-    <footer>
-        <p>Kontaktieren Sie uns für weitere Informationen:</p>
-        <address>
-            E-Mail: <a href="mailto:info@htw-saar.de">info@htw-saar.de</a><br>
-            Telefon: <a href="tel:+49-123-456789">+49 123-456789</a>
-        </address>
-    </footer>
+        // Event-Handler für das Klicken auf Wegweiser-Elemente
+        wegweiserElemente.forEach(function(element) {
+            element.addEventListener('click', function() {
+                alert("Sie haben auf " + element.querySelector('h2').textContent + " geklickt.");
+            });
+        });
+    </script>
 </body>
 </html>
+
