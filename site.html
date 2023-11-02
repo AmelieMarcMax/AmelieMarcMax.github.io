@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Campus-Wegweiser HTW Saar Campus Rotenbühl</title>
+    <style>
+        /* Stil für die Wegweiser-Elemente */
+        .wegweiser {
+            border: 2px solid #0077b6;
+            padding: 10px;
+            margin: 10px;
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+
+        .wegweiser:hover {
+            background-color: #b7e4cf;
+        }
+    </style>
+</head>
+<body>
+    <h1>Campus-Wegweiser HTW Saar Campus Rotenbühl</h1>
+    <div class="wegweiser" id="mensa">
+        <h2>Mensa</h2>
+        <p>Die Mensa bietet eine Vielzahl von Speisen und Getränken. Hier finden Sie leckere Mahlzeiten zu günstigen Preisen.</p>
+    </div>
+
+    <div class="wegweiser" id="druckerräume">
+        <h2>Druckerräume</h2>
+        <p>Die Druckerräume stehen den Studierenden zur Verfügung und bieten Druck- und Kopierservices.</p>
+    </div>
+
+    <div class="wegweiser" id="bibliothek">
+        <h2>Bibliothek</h2>
+        <p>Die Campus-Bibliothek ist ein großartiger Ort zum Lernen und bietet eine umfangreiche Sammlung von Büchern und Ressourcen.</p>
+    </div>
+
+    <!-- Fügen Sie weitere Wegweiser hinzu -->
+
+    <script>
+        // JavaScript für die Interaktivität
+        var wegweiserElemente = document.querySelectorAll('.wegweiser');
+
+        // Event-Handler für das Klicken auf Wegweiser-Elemente
+        wegweiserElemente.forEach(function(element) {
+            element.addEventListener('click', function() {
+                alert("Sie haben auf " + element.querySelector('h2').textContent + " geklickt.");
+            });
+        });
+    </script>
+</body>
+</html>
